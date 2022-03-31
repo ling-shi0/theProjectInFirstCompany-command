@@ -1,0 +1,99 @@
+{
+  "name": "dzavc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build:theme --mode production && vue-cli-service build:i18n && vue-cli-service registry:hui-pro && vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "build:i18n": "vue-cli-service build:i18n",
+    "build:only": "vue-cli-service build",
+    "build:theme": "vue-cli-service build:theme",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "registry:hui-pro": "vue-cli-service registry:hui-pro",
+    "update": "vue-cli-service registry:hui-pro && vue-cli-service build:theme"
+  },
+  "dependencies": {
+    "@agr/themes": "^1.1.10",
+    "client-container": "^0.2.27",
+    "core-js": "^3.6.5",
+    "current-script-polyfill": "^1.0.0",
+    "jquery": "^3.5.1",
+    "jquery-json": "^2.6.0",
+    "simple-player-pro": "^0.1.31",
+    "sockjs-client": "^1.5.1",
+    "stompjs": "^2.3.3",
+    "verto": "^0.1.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@agr/vue-cli-plugin-base": "~1.1.0",
+    "@agr/vue-cli-plugin-changelog": "~1.1.0",
+    "@agr/vue-cli-plugin-i18n": "~1.1.0",
+    "@agr/vue-cli-plugin-registry": "~1.1.0",
+    "@agr/vue-cli-plugin-theme": "~1.1.0",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@hui-pro/ellipsis": "^2.0.0-beta.2",
+    "@hui-pro/empty": "^1.19.0",
+    "@hui-pro/error-dialog": "^1.19.0",
+    "@hui-pro/img-preview": "^1.19.2",
+    "@hui-pro/img-view": "^1.19.2",
+    "@hui-pro/layout": "^1.19.0",
+    "@hui-pro/locale": "^1.13.1",
+    "@hui-pro/page": "^2.0.0-beta.8",
+    "@hui-pro/utils": "^1.19.0",
+    "@hui/eslint-config-vue": "^1.0.14",
+    "@hui/eslint-config-vue-typescript": "^1.0.14",
+    "@hui/stylelint-scss": "^1.0.2",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
+    "axios": "^0.19.2",
+    "babel-eslint": "^7.2.3",
+    "commitizen": "^4.1.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "git-cz": "^4.7.1",
+    "hui": "^2.13.2",
+    "husky": "^4.2.5",
+    "raw-loader": "^4.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "traceservice-instrumentation-axios": "^0.3.1",
+    "vue-i18n": "^8.16.0",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/git-cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "jquery": true
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  }
+}
