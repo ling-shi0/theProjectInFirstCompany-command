@@ -1,0 +1,18 @@
+/*
+ * @Description:
+ * @Version: 2.0
+ * @Autor: caokeke
+ * @Date: 2021-03-31 11:10:33
+ * @LastEditors: caokeke
+ * @LastEditTime: 2021-03-31 11:10:59
+ */
+module.exports = (req, res) => {
+  res.send({
+    code: '0',
+    msg: 'SUCCESS',
+    data: {
+      groupId: 'de5eb2e4a1454f46a642776d44f809a6',
+      number: '0001000000052'
+    }
+  });
+};
