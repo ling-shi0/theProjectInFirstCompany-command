@@ -1,0 +1,83 @@
+$background: #f6f6f6;
+$text-black: rgba(0, 0, 0, 0.7);
+$text-gray: rgba(0, 0, 0, 0.4);
+$button-text-blue: #3c7aff;
+
+@mixin bg-image($url) {
+  background-image: url($url + "@2x.png");
+
+  @media (-webkit-min-device-pixel-ratio: 3),
+    (min-device-pixel-ratio: 3) {
+    background-image: url($url + "@3x.png");
+  }
+}
+// i标签background-icon样式
+@mixin i-icon($size, $url) {
+  display: block;
+  width: $size;
+  height: $size;
+  background-size: $size $size;
+
+  @include bg-image($url);
+}
+
+@mixin border-1px($color:#ebebeb, $radius:2px, $style:solid) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid $color;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+@mixin catalog-org-item($iconSize, $iconUrl) {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+
+  i {
+    @include i-icon($iconSize, $iconUrl);
+
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 44px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+    margin: 0 13px 0 16px;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 16px;
+    color: $text-black;
+    border-bottom: 1px rgba(0, 0, 0, 0.12) solid;
+
+    @include border-1px;
+
+    flex: 1;
+  }
+}
+
+@mixin nodata($url) {
+  background-image: url($url);
+  background-size: 150px;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 120px;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

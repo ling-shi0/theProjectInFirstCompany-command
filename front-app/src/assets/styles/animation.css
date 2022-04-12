@@ -1,0 +1,25 @@
+/** 左飞入 */
+.left-enter {
+  transform: translateX(100%);
+}
+
+.left-enter-to {
+  transform: translateX(0);
+}
+
+.left-enter-active {
+  transition: 0.3s;
+}
+
+/** 右飞入 */
+.right-enter {
+  transform: translateX(-100%);
+}
+
+.right-enter-to {
+  transform: translateX(0);
+}
+
+.right-enter-active {
+  transition: 0.3s;
+}
