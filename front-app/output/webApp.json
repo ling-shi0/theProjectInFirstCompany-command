@@ -1,0 +1,26 @@
+{
+    "h5packCode": "hatom-spa-demo",
+    "versionName": "",
+    "author": "",
+    "description": "",
+    "updateTime": "2021/03/1 11:22:11",
+    "androidMinNativeVersion": "1.0.0",
+    "iOSMinNativeVersion": "1.0.0",
+    "url": "",
+    "componentId": [
+        "componentId1",
+        "componentId2"
+    ],
+    "menuList": [
+        {
+            "menuCode": "portal",
+            "menuName": {
+                "zh": "主页",
+                "en": "portal"
+            },
+            "menuIcon": "/icon.png",
+            "menuPath": "/index.html"
+        }
+    ],
+    "ext": {}
+}
