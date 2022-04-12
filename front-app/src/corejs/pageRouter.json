@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "type": "standard",
+      "name": "首页",
+      "path": "index.html",
+      "tabBar": [],
+      "data": {}
+    }
+  ] 
+}

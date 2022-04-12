@@ -1,0 +1,76 @@
+{
+    "h5packCode": "hatom-spa-demo",
+    "versionName": "1.0",
+    "author": "wangXiaoMing",
+    "description": "快出警app",
+    "updateTime": "2021/08/23 20:08:00",
+    "androidMinNativeVersion": "1.0.0",
+    "iOSMinNativeVersion": "1.0.0",
+    "url": "",
+    "componentId": [
+        "componentId1",
+        "componentId2"
+    ],
+    "menuList": [
+        {
+            "menuCode": "avc",
+            "menuName": {
+                "zh": "警情",
+                "en": "portal"
+            },
+            "menuIcon": "/dealAlarm-default.png",
+            "menuPath": "/index.html"
+        },
+        {
+            "menuCode": "native_xmessage",
+            "menuName": {
+                "zh": "消息",
+                "en": "message"
+            },
+            "menuIcon": "/message-default.png",
+            "menuPath": "/index.html"
+        },
+        {
+            "menuCode": "control",
+            "menuName": {
+                "zh": "预警",
+                "en": "control"
+            },
+            "menuIcon": "/alarm-default.png",
+            "menuPath": "/index.html#/alertControl"
+        },
+        {
+            "menuCode": "myself",
+            "menuName": {
+                "zh": "我的",
+                "en": "myself"
+            },
+            "menuIcon": "/myself-default.png",
+            "menuPath": "/index.html#/personal"
+        }
+    ],
+    "ext": {
+        "portal": [
+            {
+                "menuCode": "avc",
+                "itemTextSelectColor": "#00BFFF",
+                "itemTextUnSelectColor": "#808080"
+            },
+            {
+                "menuCode": "native_xmessage",
+                "itemTextSelectColor": "#00BFFF",
+                "itemTextUnSelectColor": "#808080"
+            },
+            {
+                "menuCode": "control",
+                "itemTextSelectColor": "#00BFFF",
+                "itemTextUnSelectColor": "#808080"
+            },
+            {
+                "menuCode": "myself",
+                "itemTextSelectColor": "#00BFFF",
+                "itemTextUnSelectColor": "#808080"
+            }
+        ]
+    }
+}
